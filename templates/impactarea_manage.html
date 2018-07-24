@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCilAMcnbgPM99zInhrDmgEPZPtwcPRqms&libraries=drawing,geometry"></script>
+</head>
+
+
+<style type="text/css">
+
+	body {
+		margin: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	.site-area {
+		max-width: 80%;
+		margin: auto;
+	}
+
+	#header {
+		min-height: 60px;
+		width: 100%;
+		display: inline-block;
+		background: #900;
+		background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #990000),color-stop(1, #611306));
+		background-image: -moz-linear-gradient(center top,#990000 0%,#611306 100%);
+		background-image: -o-linear-gradient(top,#990000,#611306);
+	}
+
+	#TNAImpactArea {
+		color: white;
+		position: relative;
+		display: inline-block;
+		font: 36px/36px Adobe Caslon Pro, Georgia, Times, Times New Roman, serif;
+	}
+
+	#USClogo {
+		margin-top: 20px;
+		width: 206px;
+		height: 50px;
+		float: right;
+		background: url(//about.usc.edu/wp-content/themes/usc_gateway/images/usc-logo.svg) 0 0 no-repeat;
+		background-size: 176px, 38px;
+	}
+
+	#content {
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+	}
+
+	#map-upc {
+		width: 100%;
+		height: 500px;
+	}
+
+	#map-hsc {
+		width: 100%;
+		height: 500px;
+	}
+
+	#end {
+		height: 30px;
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background-color: #282828;
+		display: inline-block;
+	}
+
+</style>
+
+
+<body>
+
+	<div id="header">
+		<div class="site-area">
+			<h1 id="TNAImpactArea">TNA Impact Area Data Management</h1>
+			<a href="https://www.usc.edu/">
+				<div id="USClogo"></div>
+			</a>
+		</div> 
+	</div>
+
+
+	<div id="content">
+		<div class="site-area">
+				<h2 style="color: #900">University Park Campus Area</h2>
+				<input onclick="removePolygon('UPC');" type=button value="Remove Area">
+				<input onclick="savePolygonUPC('UPC');" type=button value="Save">
+				<div id="map-upc"></div>
+				<h2 style="color: #900">Health Sciences Campus Area</h2>
+				<input onclick="removePolygon('HSC');" type=button value="Remove Area">
+				<input onclick="savePolygonUPC('HSC');" type=button value="Save">
+				<div id="map-hsc"></div>
+				<h2 style="color: #900">Hint</h2>
+				<p><strong>Draw Area</strong> Click the polygon marker to start drawing a shape</p>
+				<p><strong>Delete Area</strong> Remove the area outside the red area, then click "Remove Area" button</p>
+				<p><strong>Save</strong> Click the "Save" button before closing this web page to save the change</p>
+		</div>
+	</div>
+
+	<div id="end">
+		<div class="site-area">
+			<p style="color: white; margin: auto;">Content managed by Trojans Neighborhood Association</p>
+		</div>
+	</div>
+
+
+
+</body>
+
+<script type="text/javascript">
+
+	var GOOGLE_API_KEY = 'AIzaSyCilAMcnbgPM99zInhrDmgEPZPtwcPRqms';
+
+	var mapUPC;
+	var areaUPC;
+	var UPC_DEFAULT_ZOOM = 13.6;
+	var UPC_DEFAULT_LAT = 34.026183;
+	var UPC_DEFAULT_LNG = -118.283976;
+
+	var mapHSC;
+	var areaHSC;
+	var HSC_DEFAULT_ZOOM = 14.6;
+	var HSC_DEFAULT_LNG = -118.201284;
+	var HSC_DEFAULT_LAT = 34.063867;
+
+	var areaUPCCoords = [
+		{lat: 34.018234, lng: -118.291574},
+		{lat: 34.018304, lng: -118.300157},
+		{lat: 34.032708, lng: -118.300243},
+		{lat: 34.032806, lng: -118.291598},
+		{lat: 34.036006, lng: -118.291553},
+		{lat: 34.036041, lng: -118.284043},
+		{lat: 34.039774, lng: -118.284129},
+		{lat: 34.032667, lng: -118.268329},
+		{lat: 34.020217, lng: -118.276232},
+		{lat: 34.019683, lng: -118.274859},
+		{lat: 34.013066, lng: -118.279108},
+		{lat: 34.014040, lng: -118.282770},
+		{lat: 34.011142, lng: -118.282793},
+		{lat: 34.010892, lng: -118.291591}
+	];
+	var areaHSCCoords = [
+		{lat: 34.062789, lng: -118.211185},
+		{lat: 34.066090, lng: -118.206223},
+		{lat: 34.065594, lng: -118.204751},
+		{lat: 34.065575, lng: -118.202160},
+		{lat: 34.064676, lng: -118.197438},
+		{lat: 34.069108, lng: -118.195597},
+		{lat: 34.068970, lng: -118.194809},
+		{lat: 34.064876, lng: -118.196083},
+		{lat: 34.063847, lng: -118.190050},
+		{lat: 34.062696, lng: -118.190186},
+		{lat: 34.063718, lng: -118.195797},
+		{lat: 34.061870, lng: -118.196975},
+		{lat: 34.062864, lng: -118.199128},
+		{lat: 34.060518, lng: -118.200401},
+		{lat: 34.061284, lng: -118.201382},
+		{lat: 34.061283, lng: -118.203517},
+		{lat: 34.059409, lng: -118.204631},
+		{lat: 34.061735, lng: -118.210210}
+	];
+
+	function initUPCMap() {
+
+		// Init UPC Map
+		mapUPC = new google.maps.Map(document.getElementById('map-upc'), {
+			zoom: UPC_DEFAULT_ZOOM,
+			center: {
+				lat: UPC_DEFAULT_LAT,
+				lng: UPC_DEFAULT_LNG
+			},
+			mapTypeControlOptions: {
+				style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+				position: google.maps.ControlPosition.TOP_RIGHT
+			}
+		});
+
+		// Set Impact Area
+		areaUPC = new google.maps.Polygon({
+			paths: areaUPCCoords,
+			strokeColor: '#FF0000',
+			strokeOpacity: 0.5,
+			strokeWeight: 1,
+			fillColor: '#FF0000',
+			fillOpacity: 0.2
+		});		
+		areaUPC.setMap(mapUPC);
+
+		// Enable Drawing Polygons
+		mapUPC.data.setControls(['Polygon']);
+		mapUPC.data.setStyle({
+			strokeColor: '#FF0000',
+			strokeOpacity: 0.5,
+			strokeWeight: 0,
+			fillColor: '#02acff',
+			fillOpacity: 0.2,
+			editable: true,
+			draggable: true
+		});
+	}
+
+	// Init HSC Map
+	function initHSCMap() {
+
+		// Init HSC Map
+		mapHSC = new google.maps.Map(document.getElementById('map-hsc'), {
+			zoom: HSC_DEFAULT_ZOOM,
+			center: {
+				lat: HSC_DEFAULT_LAT,
+				lng: HSC_DEFAULT_LNG
+			},
+			mapTypeControlOptions: {
+				style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+				position: google.maps.ControlPosition.TOP_RIGHT
+			}
+		});
+
+		// Set Impact Area
+		areaHSC = new google.maps.Polygon({
+			paths: areaHSCCoords,
+			strokeColor: '#FF0000',
+			strokeOpacity: 0.5,
+			strokeWeight: 1,
+			fillColor: '#FF0000',
+			fillOpacity: 0.2
+		});
+		areaHSC.setMap(mapHSC);
+
+		// Enable Drawing Polygons
+		mapHSC.data.setControls(['Polygon']);
+		mapHSC.data.setStyle({
+			strokeColor: '#FF0000',
+			strokeOpacity: 0.5,
+			strokeWeight: 0,
+			fillColor: '#02acff',
+			fillOpacity: 0.2,
+			editable: true,
+			draggable: true
+		});
+	}
+
+
+	// Send http request (GET method) without JQeury, get GeoJSON file from cloud
+	// Call loadPolyfons(map, xmlDoc) if request were successfull
+	// Display alert message if request failed
+    function loadXML(url, map) {
+    	var xmlhttp;
+		var xmlDoc;
+		if(window.XMLHttpRequest) {
+			//code for IE7+ Firefox Chrome Opera Safari
+			xmlhttp = new XMLHttpRequest();
+		} else {
+			// code for IE5 IE6
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		try {
+			xmlhttp.overrideMimeType("application/json");
+			xmlhttp.open("GET", url, true);		
+			xmlhttp.onreadystatechange = function() {
+				if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					xmlDoc = xmlhttp.responseText;
+					loadPolygons(map, xmlDoc);
+				} else if (xmlhttp.status == 404) {
+					alert("The JSON File Doesn't exist !");
+					return false;
+				}
+			}
+			xmlhttp.send(null);
+		}
+		catch(err) {
+			alert("The JSON File Doesn't exist !");
+			return false;
+		}
+	}
+
+	// Http request (POST method) to modify GeoJSON file
+	function writeXML(url, data) {
+		var xmlDoc;
+		if(window.XMLHttpRequest) {
+			xmlhttp = new XMLHttpRequest();
+		} else {
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		try {
+			xmlhttp.overrideMimeType("application/json");
+			xmlhttp.open("POST", url, true);	
+			xmlhttp.setRequestHeader("Content-type", "application/json; charset=utf-8");
+			xmlhttp.onreadystatechange = function() {
+				if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				} else if (xmlhttp.status == 404) {
+					alert("The JSON File Doesn't exist !");
+					return false;
+				}
+			}
+			xmlhttp.send(data);
+		}
+		catch(err) {
+			alert("The JSON File Doesn't exist !");
+			return false;
+		}
+	}
+
+	// Load GeoJSON file, put data into Data Layer and show polygons on the map
+	function loadPolygons(maps, json) {
+		var map = maps === "UPC" ? mapUPC : mapHSC;
+		var data = JSON.parse(json);
+		map.data.addGeoJson(data);
+	}
+
+	// Save geo loacation data in Data Layer, then call writeXML to modify GeoJSON
+	function savePolygonUPC(maps) {
+		var map = maps === "UPC" ? mapUPC : mapHSC;
+		var url = maps === "UPC" ? "upcGeoWrite" : "hscGeoWrite";
+		map.data.toGeoJson(function (json) {
+			writeXML(url, JSON.stringify(json));
+		});
+	}
+
+	// Delete polygons on the map
+	function removePolygon(maps) {
+		var map = maps === "UPC" ? mapUPC : mapHSC;
+		var area = maps === "UPC" ? areaUPC : areaHSC;
+		map.data.forEach(function(feature) {
+			var inArea = false;			
+			var latLng = feature.getGeometry().getAt(0).getArray();
+			for (var i = 0; i < latLng.length; i++) {
+				if (google.maps.geometry.poly.containsLocation(latLng[i], area)) {
+					inArea = true;
+				}
+			}
+			if (!inArea) {
+				map.data.remove(feature);
+			}
+		})
+	}
+
+	// Init Maps
+	initUPCMap();
+	initHSCMap();
+
+	// loadXML (url, map)
+	loadXML("upcGeoLoad", "UPC");
+	loadXML("hscGeoLoad", "HSC");
+
+</script>
+
+</html>

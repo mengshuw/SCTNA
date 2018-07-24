@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Head for all TNA web pages -->
+	<head>
+		<title>SCTNA | Implact Area</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<!-- Logo -->
+		<link rel="shortcut icon" type="image/png" href="/img/logo_sctna.png">
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="/css/home.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+
+</head>
+
+
+<style type="text/css">
+
+	section {
+		background-color: #EEEEEE;
+	}
+
+	#map-upc {
+		width: 100%;
+		height: 500px;
+	}
+
+</style>
+
+
+<body>
+
+	<header>
+		<div class="container">
+			<label class="title">
+				<!--<label class="title-red">SC</label>-->
+				<img id="sc-logo" src="/img/sc%20logo.png">
+				<label><label class="title-red">T</label>ROJANS</label>
+				<label><label class="title-red">N</label>EIGHBORHOOD</label>
+				<label><label class="title-red">A</label>SSOCIATION</label>
+			</label>
+			<img id="logo_usc" src="/img/logo_usc_full.jpg"/>
+		</div>
+	</header>
+	<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+		<div class="container">
+			<button id="menu" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fa fa-bars"></i> MENU
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link text-center js-scroll-trigger" href="/">HOME</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-center" href="/about_us">ABOUT US</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-center" href="/donate">DONATE</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-center" href="/impact_area">IMPACT AREA</a>
+					</li>
+					<!--<li class="nav-item">
+                        <a class="nav-link text-center" href="#">TOWN HALL</a>
+                    </li>-->
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="UPCMap">
+		<div class="container">
+			<div class="section-heading">University Park Campus Area</div>
+			<div class="resources">
+				<div class="row align-items-center resource-item">
+					<div id="map-upc"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Footer for all TNA web pages -->
+	<footer>
+		<div class="container footer-upper">
+			<img src="/img/bookmark.png" id="bookmark"/>
+			<div class="row">
+				<div class="layout-half layout-half-padding">
+					<div class="footer-heading">
+						<i class="fas fa-caret-right footer-heading-icon"></i>
+						<label class="footer-heading-font">Address</label>
+					</div>
+					<div class="footer-content">
+						<p>University of Southern California</p>
+						<p>Office of Campus Activities SKS 410</p>
+						<p>3607 Trousdale Parkway</p>
+						<p>Los Angeles, CA, 90089-3103</p>
+						<p>Email: tna@usc.edu</p>
+					</div>
+				</div>
+				<div class="layout-half layout-half-padding">
+					<div class="footer-heading">
+						<i class="fas fa-caret-right footer-heading-icon"></i>
+						<label class="footer-heading-font">Follow us</label>
+					</div>
+					<div class="footer-content">
+						<div>
+							<i class="fas fa-angle-right" style="color: whilte;"></i>
+							<i class="fab fa-facebook-square"></i> <a href="https://www.facebook.com/usctna/" style="color: white">facebook</a>
+						</div>
+						<div>
+							<i class="fas fa-angle-right"></i>
+							<i class="fab fa-instagram"></i> instagram                                
+						</div>
+						<div>
+							<i class="fas fa-angle-right"></i>
+							<i class="fas fa-envelope-square"></i> <a href="mailto:tna@usc.edu" style="color: white">email</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-lower">
+			<p class="text-center">Copyright © 2018 USC SCTNA</p>
+		</div>
+	</footer>
+
+	<!-- Google API -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCilAMcnbgPM99zInhrDmgEPZPtwcPRqms&libraries=drawing,geometry"></script>
+
+	<!-- JavaScript for all TNA web pages -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="js/smoothscroll.js"></script>
+
+</body>
+
+
+<script type="text/javascript">
+	
+	var GOOGLE_API_KEY = 'AIzaSyCilAMcnbgPM99zInhrDmgEPZPtwcPRqms';
+
+	var mapUPC;
+	var areaUPC;
+	var UPC_DEFAULT_ZOOM = 13.9;
+	var UPC_DEFAULT_LAT = 34.026183;
+	var UPC_DEFAULT_LNG = -118.283976;
+
+	var mapHSC;
+	var areaHSC;
+	var HSC_DEFAULT_ZOOM = 14.6;
+	var HSC_DEFAULT_LNG = -118.201284;
+	var HSC_DEFAULT_LAT = 34.063867;
+
+	var areaUPCCoords = [
+		{lat: 34.018234, lng: -118.291574},
+		{lat: 34.018304, lng: -118.300157},
+		{lat: 34.032708, lng: -118.300243},
+		{lat: 34.032806, lng: -118.291598},
+		{lat: 34.036006, lng: -118.291553},
+		{lat: 34.036041, lng: -118.284043},
+		{lat: 34.039774, lng: -118.284129},
+		{lat: 34.032667, lng: -118.268329},
+		{lat: 34.020217, lng: -118.276232},
+		{lat: 34.019683, lng: -118.274859},
+		{lat: 34.013066, lng: -118.279108},
+		{lat: 34.014040, lng: -118.282770},
+		{lat: 34.011142, lng: -118.282793},
+		{lat: 34.010892, lng: -118.291591}
+	];
+	var areaHSCCoords = [
+		{lat: 34.062789, lng: -118.211185},
+		{lat: 34.066090, lng: -118.206223},
+		{lat: 34.065594, lng: -118.204751},
+		{lat: 34.065575, lng: -118.202160},
+		{lat: 34.064676, lng: -118.197438},
+		{lat: 34.069108, lng: -118.195597},
+		{lat: 34.068970, lng: -118.194809},
+		{lat: 34.064876, lng: -118.196083},
+		{lat: 34.063847, lng: -118.190050},
+		{lat: 34.062696, lng: -118.190186},
+		{lat: 34.063718, lng: -118.195797},
+		{lat: 34.061870, lng: -118.196975},
+		{lat: 34.062864, lng: -118.199128},
+		{lat: 34.060518, lng: -118.200401},
+		{lat: 34.061284, lng: -118.201382},
+		{lat: 34.061283, lng: -118.203517},
+		{lat: 34.059409, lng: -118.204631},
+		{lat: 34.061735, lng: -118.210210}
+	];
+
+
+	function initUPCMap() {
+
+		// Init UPC Map
+		mapUPC = new google.maps.Map(document.getElementById('map-upc'), {
+			zoom: UPC_DEFAULT_ZOOM,
+			center: {
+				lat: UPC_DEFAULT_LAT,
+				lng: UPC_DEFAULT_LNG
+			},
+			mapTypeControlOptions: {
+				style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+				position: google.maps.ControlPosition.TOP_RIGHT
+			}
+		});
+
+		// Set Impact Area
+		areaUPC = new google.maps.Polygon({
+			paths: areaUPCCoords,
+			strokeColor: '#FF0000',
+			strokeOpacity: 0.5,
+			strokeWeight: 1,
+			fillColor: '#FF0000',
+			fillOpacity: 0.2
+		});		
+		areaUPC.setMap(mapUPC);
+
+		// Draw Polygon, Not Eidtable
+		mapUPC.data.setStyle({
+			strokeColor: '#FF0000',
+			strokeOpacity: 0.5,
+			strokeWeight: 0,
+			fillColor: '#02acff',
+			fillOpacity: 0.2
+		});
+	}
+
+	function initHSCMap() {
+
+		// Init HSC Map
+		mapHSC = new google.maps.Map(document.getElementById('map-hsc'), {
+			zoom: HSC_DEFAULT_ZOOM,
+			center: {
+				lat: HSC_DEFAULT_LAT,
+				lng: HSC_DEFAULT_LNG
+			},
+			mapTypeControlOptions: {
+				style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+				position: google.maps.ControlPosition.TOP_RIGHT
+			}
+		});
+
+		// Set Impact Area
+		areaHSC = new google.maps.Polygon({
+			paths: areaHSCCoords,
+			strokeColor: '#FF0000',
+			strokeOpacity: 0.5,
+			strokeWeight: 1,
+			fillColor: '#FF0000',
+			fillOpacity: 0.2
+		});
+		areaHSC.setMap(mapHSC);
+
+		// Draw Polygon, Not Eidtable
+		mapHSC.data.setStyle({
+			strokeColor: '#FF0000',
+			strokeOpacity: 0.5,
+			strokeWeight: 0,
+			fillColor: '#02acff',
+			fillOpacity: 0.2
+		});
+	}
+
+	// Send http request (GET method) without JQeury, get GeoJSON file from cloud
+	// Call loadPolyfons(map, xmlDoc) if request were successfull
+	// Display alert message if request failed
+	function loadXML(url, map) {
+		var xmlhttp;
+		var xmlDoc;
+		if(window.XMLHttpRequest) {
+			//code for IE7+ Firefox Chrome Opera Safari
+			xmlhttp = new XMLHttpRequest();
+		} else {
+			// code for IE5 IE6
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		try {
+			xmlhttp.overrideMimeType("application/json");
+			xmlhttp.open("GET", url, true);		
+			xmlhttp.onreadystatechange = function() {
+				if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					xmlDoc = xmlhttp.responseText;
+					loadPolygons(map, xmlDoc);
+				} else if (xmlhttp.status == 404) {
+					alert("The JSON File Doesn't exist !");
+					return false;
+				}
+			}
+			xmlhttp.send(null);
+		}
+		catch(err) {
+			alert("The JSON File Doesn't exist !");
+			return false;
+		}
+	}
+
+	// Load GeoJSON file, put data into Data Layer and show polygons on the map
+	function loadPolygons(maps, json) {
+		var map = maps === "UPC" ? mapUPC : mapHSC;
+		var data = JSON.parse(json);
+		map.data.addGeoJson(data);
+	}
+
+	// Init Maps
+	initUPCMap();
+	// initHSCMap();
+
+	// loadXML (url, map)
+	loadXML("upcGeoLoad", "UPC");
+	// loadXML("hscGeoLoad", "HSC");
+
+</script>
+
+				
+
+</html>

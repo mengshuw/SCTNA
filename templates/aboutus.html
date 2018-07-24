@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TNA | About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <!-- Logo -->
+    <link rel="shortcut icon" type="image/png" href="/img/logo_sctna.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/css/aboutus.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <label class="title">
+                <!--<label class="title-red">SC</label>-->
+                <img id="sc-logo" src="/img/sc%20logo.png">
+                <label><label class="title-red">T</label>ROJANS</label>
+                <label><label class="title-red">N</label>EIGHBORHOOD</label>
+                <label><label class="title-red">A</label>SSOCIATION</label>
+            </label>
+            <img id="logo_usc" src="/img/logo_usc_full.jpg"/>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container">
+            <button id="menu" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i> MENU
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-center js-scroll-trigger" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="/about_us">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="/donate">DONATE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="/impact_area">IMPACT AREA</a>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-link text-center" href="#">TOWN HALL</a>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="row">
+            <div class="col-2 menu">
+              <ul>
+                <li id ="au-li" style="background-color: #FFCC00"><a class="text-center" href="#" onclick="aboutDisplay()" style="text-decoration: none; color:white">About Us</a></li>
+                <li id ="ot-li" style="background-color: #990000"><a class="text-center" href="#" onclick="teamDisplay()" style="text-decoration: none;color:white">Our Team</a></li>
+              </ul>
+            </div >
+
+            <!--<div class="col-2 menu-mobile">
+                <button data-toggle="dropdown" style="background-color:#990000"><i class="fa fa-angle-down" style="color:white;"></i></button>
+            </div>-->
+
+            <div id="resource" class="col-9">
+                <div class="container" id="about-us" style="display:block">
+                    <div class="section-heading">About Us</div>
+                    <div class="resources">
+                        <div class="row align-items-center resource-item">
+                            <div class="resource-content">
+                                <p>The Trojans Neighborhood Association, TNA, is a student organization at the University of Southern
+                                California founded in 2018. USC is located in South Los Angeles. The unique inner-city location comes
+                                with challenges but also offers opportunities for students to engage with the community to improve
+                                quality of life. The Trojans Neighborhood Association aims to bring together students and community
+                                members in order to fight the “wicked problems” our neighborhood faces. “Wicked problems” refer to
+                                complex issues that are resistant to resolution. They include poverty; food and water security; social
+                                justice issues; public health issues; sustainability and climate change; homelessness; renters’ rights;
+                                aging; and many more. Our goal is to bring awareness to these issues and to work toward solutions
+                                through projects and workshops. TNA operates within the USC DPS monitored zone. Currently, we are
+                                focusing primarily on the area surrounding the University Park Campus, but we hope to expand our
+                                influence to the area surrounding the Health Sciences Campus in the future.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container"  id="our-team" style="display:none">
+                    <div class="section-heading">Our Team</div>
+                    <div class="row">
+                        <div class="column">
+                            <div class="card">
+                                <img src="/img/jesse.jpeg" alt="Jane" style="width:100%">
+                                <div class="container">
+                                    <div class="name">Jesse Ramirez</div>
+                                    <p class="ot-title">President</p>
+                                    <a href="#" style="text-decoration:none; color:#990000" onmousemove="overTexting(this)" onmouseout="outTexting(this)">tna@usc.edu</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card">
+                                <img src="/img/cassie.png" alt="Jane" style="width:100%">
+                                <div class="container">
+                                    <div class="name">Cassondra Tripard</div>
+                                    <p class="ot-title">Vice President</p>
+                                    <a href="#" style="text-decoration:none; color:#990000" onmousemove="overTexting(this)" onmouseout="outTexting(this)">tripard@usc.edu</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card">
+                                <img src="/img/lilly.jpeg" alt="Jane" style="width:100%">
+                                <div class="container">
+                                    <div class="name">Lilly Nie</div>
+                                    <p class="ot-title">Director of Planning</p>
+                                    <a href="#" style="text-decoration:none; color:#990000" onmousemove="overTexting(this)" onmouseout="outTexting(this)">lillynie@usc.edu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="row">
+                        <div class="column">
+                            <div class="card">
+                                <img src="/img/kate.jpg" alt="Jane" style="width:100%">
+                                <div class="container">
+                                    <div class="name">Mengshu Wu</div>
+                                    <p class="ot-title">Director of Web Team</p>
+                                    <a href="#" style="text-decoration:none; color:#990000" onmousemove="overTexting(this)" onmouseout="outTexting(this)">katewu06@outlook.com</a>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="column">
+                            <div class="card">
+                                <img src="/img/WenJing.jpeg" alt="Jane" style="width:100%">
+                                <div class="container">
+                                    <div class="name">Wengjing Wang</div>
+                                    <p class="ot-title">Member of Web Team</p>
+                                    <a href="#" style="text-decoration:none; color:#990000" onmousemove="overTexting(this)" onmouseout="outTexting(this)">wenjinwa@usc.edu</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card">
+                                <img src="/img/Jiepeng.png" alt="Jane" style="width:100%">
+                                <div class="container">
+                                    <div class="name">Jiepeng Sun</div>
+                                    <p class="ot-title">Member of Web Team</p>
+                                    <a href="#" style="text-decoration:none; color:#990000" onmousemove="overTexting(this)" onmouseout="outTexting(this)">jiepengs@usc.edu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <div class="card">
+                                <img src="/img/robert.jpeg" alt="Jane" style="width:100%">
+                                <div class="container">
+                                    <div class="name">Robert Min</div>
+                                    <p class="ot-title">Director of Public Health</p>
+                                    <a href="#" style="text-decoration:none; color:#990000" onmousemove="overTexting(this)" onmouseout="outTexting(this)">Minr@usc.edu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                         
+                </div>
+            </div>        
+        </div>
+    </section>
+
+ <footer>
+        <div class="container footer-upper">
+            <img src="/img/bookmark.png" id="bookmark"/>
+            <div class="row">
+                <div class="layout-half layout-half-padding">
+                    <div class="footer-heading">
+                        <i class="fas fa-caret-right"></i>Address
+                    </div>
+                    <div class="footer-content">
+                        <p>University of Southern California</p>
+                        <p>Office of Campus Activities SKS 410</p>
+                        <p>3607 Trousdale Parkway</p>
+                        <p>City: Los Angeles State: California</p>
+                        <p>Zip: 90089-3103</p>
+                        <p>Email: tna@usc.edu</p>
+                    </div>
+                </div>
+                <div class="layout-half layout-half-padding">
+                    <div class="footer-heading">
+                        <i class="fas fa-caret-right footer-heading-icon"></i>
+                        <label class="footer-heading-font">Follow us</label>
+                    </div>
+                    <div class="footer-content">
+                        <div>
+                            <i class="fas fa-angle-right"></i>
+                            <i class="fab fa-facebook-square"></i> facebook
+                        </div>
+                        <div>
+                            <i class="fas fa-angle-right"></i>
+                            <i class="fab fa-instagram"></i> instagram                                
+                        </div>
+                        <div>
+                            <i class="fas fa-angle-right"></i>
+                            <i class="fas fa-envelope-square"></i> <a href="mailto:tna@usc.edu" style="color: white">email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-lower">
+            <p class="text-center">Designed & Developed by SCTNA Web Development Team</p>
+        </div>
+    </footer>
+    
+    <script>
+        function aboutDisplay() {
+            var x = document.getElementById("about-us");
+            var y = document.getElementById("our-team");
+            var m = document.getElementById("au-li");
+            var n = document.getElementById("ot-li");
+            
+            x.style.display = "block";
+            y.style.display = "none";
+            
+            m.style.backgroundColor = "#FFCC00";
+            n.style.backgroundColor = "#990000";
+        }
+        
+        function teamDisplay() {
+            var x = document.getElementById("our-team");
+            var y = document.getElementById("about-us");
+            var n = document.getElementById("au-li");
+            var m = document.getElementById("ot-li");
+          
+            if(x.style.display === "none") {
+                x.style.display = "block";
+            }
+            if (y.style.display === "block") {
+                y.style.display = "none";
+            }
+            
+            m.style.backgroundColor = "#FFCC00";
+            n.style.backgroundColor = "#990000";
+        }
+        function overTexting(x) {
+            x.style.color = "#FFCC00";
+        }
+
+        function outTexting(x) {
+            x.style.color = "#990000";
+        } 
+    </script>
+
+    <!-- Google API -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCilAMcnbgPM99zInhrDmgEPZPtwcPRqms&libraries=drawing,geometry"></script>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
