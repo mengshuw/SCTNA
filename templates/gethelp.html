@@ -1,174 +1,108 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>SCTNA</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8">
+	<head>
+		<title>SCTNA</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<!-- Home CSS, Get Help CSS, Loading CSS -->
+		<link rel="stylesheet" type="text/css" href="/css/home.css">
+		<link rel="stylesheet" type="text/css" href="/css/gethelp.css">
+		<link rel="stylesheet" type="text/css" href="/css/loading.css">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Font CSS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<script type="text/javascript">var submitted=false;</script>
+	</head>
 
-        <!-- Logo -->
-        <link rel="shortcut icon" type="image/png" href="/img/logo_sctna.png">
-        
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="/css/home.css">
-        <link rel="stylesheet" type="text/css" href="/css/gethelp.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        
-        <!-- Font -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    </head>
+	<body>
+		
+		<div id="header"></div>
 
-    <body>
-        <header>
-            <div class="container">
-                <label class="title">
-                    <!--<label class="title-red">SC</label>-->
-                    <img id="sc-logo" src="/img/sc%20logo.png">
-                    <label><label class="title-red">T</label>ROJANS</label>
-                    <label><label class="title-red">N</label>EIGHBORHOOD</label>
-                    <label><label class="title-red">A</label>SSOCIATION</label>
-                </label>
-                <img id="logo_usc" src="/img/logo_usc_full.jpg"/>
-            </div>
-        </header>
-        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+		<section id="gethelp-form">
+			<div class="container">
+				<div class="section-heading">Let Us Know Your Current Problems</div>
+				<div class="resources">
+					<div class="row align-items-center resource-item">
+						
+						<!-- Form -->
+						<div class="form_wrapper">
+							<form id ="gform" action = "https://docs.google.com/forms/d/e/1FAIpQLSdgvRPzBq0xtLypFE8B8jlW6VsTYY8AvORdGIuC-xuqKNcLHA/formResponse?" target="hidden_iframe">
+								<!-- Row -->
+								<div class="row clearfix">
+									<div class="col_half">
+										<label>First name</label>
+										<div class="input_field">
+											<input type="text" name="entry.1466745086" id="entry.1466745086"/>
+										</div>
+									</div>
+									<div class="col_half">
+								  		<label>Last name</label>
+								  		<div class="input_field">
+											<input type="text" name="entry.666252420" id="entry.666252420"/>
+								  		</div>
+									</div>
+							  	</div>
+							  	<!-- Row -->
+							  	<div class="row clearfix">
+									<div class="col_half">
+								  		<label><span style="color:red;">*</span>Email</label>
+								  		<div class="input_field">
+											<input type="email" name="entry.1402619348" id="entry.1402619348"required />
+								  		</div>
+									</div>
+									<div class="col_half">
+								  		<label>Phone</label>
+								  		<div class="input_field">
+											<input type="tel" name="entry.1053914321" id="entry.1053914321"pattern="[0-9]{10}" />
+								  		</div>
+									</div>
+							  	</div>
+							  	<!-- Row -->
+							  	<div class="row clearfix">
+									<div>
+								  		<label class="text-label">What can we do for you?</label>
+								  		<textarea cols="128" rows="3" name="entry.536149404" id="entry.536149404"></textarea>
+									</div>
+								</div>
+								<input class="button" type="submit" value="Sumbit" />
+							</form>
+							<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+						</div>
 
-            <div class="container">
-                
-                <button id="menu" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i> MENU
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-center js-scroll-trigger" href="/">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-center" href="/about_us">ABOUT US</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-center" href="#">DONATE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-center" href="/impact_area">IMPACT AREA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-center" href="#">TOWN HALL</a>
-                        </li>
-                    </ul>
-                </div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<div id="contactus"></div>
+		<div id="footer"></div>
 
-            </div>
-            
-        </nav>
-        
-        <section id="form">
-            <div class="container">
-                <div class="section-heading">Let Us Know Your Current Problems</div>
-                <div class="form-item">
-                    <div class="form_wrapper">
-                      <div class="form_container">
-                        <form id ="gform" action = "https://docs.google.com/forms/d/e/1FAIpQLSdgvRPzBq0xtLypFE8B8jlW6VsTYY8AvORdGIuC-xuqKNcLHA/formResponse?" target="hidden_iframe">
-                          <div class="row clearfix">
-                            <div class="col_half">
-                              <label>First name</label>
-                              <div class="input_field">
-                                <input type="text" name="entry.1466745086" id="entry.1466745086"/>
-                              </div>
-                            </div>
-                            <div class="col_half">
-                              <label>Last name</label>
-                              <div class="input_field">
-                                <input type="text" name="entry.666252420" id="entry.666252420"/>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row clearfix">
-                            <div class="col_half">
-                              <label><span style="color:red;">*</span>Email</label>
-                              <div class="input_field">
-                                <input type="email" name="entry.1402619348" id="entry.1402619348"required />
-                              </div>
-                            </div>
-                            <div class="col_half">
-                              <label>Phone</label>
-                              <div class="input_field">
-                                <input type="tel" name="entry.1053914321" id="entry.1053914321"pattern="[0-9]{10}" />
-                              </div>
-                            </div>
-                          </div>
+	</body>
 
-                          <div class="row clearfix">
-                            <div>
-                              <label class="text-label">What can we do for you?</label>
-                              <textarea cols="100" rows="3" name="entry.536149404" id="entry.536149404"></textarea>
-                            </div>
-                          </div>
-                          <input class="button" type="submit" value="Sumbit" />
-                        </form>
-                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <footer>
-            <div class="container footer-upper">
-                <img src="/img/bookmark.png" id="bookmark"/>
-                <div class="row">
-                    <div class="layout-half layout-half-padding">
-                        <div class="footer-heading">
-                            <i class="fas fa-caret-right"></i>Address
-                        </div>
-                        <div class="footer-content">
-                            <p>University of Southern California</p>
-                            <p>Office of Campus Activities SKS 410</p>
-                            <p>3607 Trousdale Parkway</p>
-                            <p>City: Los Angeles State: California</p>
-                            <p>Zip: 90089-3103</p>
-                            <p>Email: tna@usc.edu</p>
-                        </div>
-                    </div>
-                    <div class="layout-half layout-half-padding">
-                        <div class="footer-heading">
-                            <i class="fas fa-caret-right footer-heading-icon"></i>
-                            <label class="footer-heading-font">Follow us</label>
-                        </div>
-                        <div class="footer-content">
-                            <div>
-                                <i class="fas fa-angle-right"></i>
-                                <i class="fab fa-facebook-square"></i> facebook
-                            </div>
-                            <div>
-                                <i class="fas fa-angle-right"></i>
-                                <i class="fab fa-instagram"></i> instagram                                
-                            </div>
-                            <div>
-                                <i class="fas fa-angle-right"></i>
-                                <i class="fas fa-envelope-square"></i> <a href="mailto:tna@usc.edu" style="color: white">email</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-lower">
-                <p class="text-center">Designed & Developed by SCTNA Web Development Team</p>
-            </div>
-        </footer>
-
-        <!-- JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script type="text/javascript">var submitted=false;</script>
-        <script type="text/javascript">
-          $('#gform').on('submit', function(e) {
-          $('#gform *').fadeOut(2000);
-          $('#gform').prepend('Your submission has been processed...');
-          });
-        </script>
-    </body>
+	<!-- jQuery JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<!-- Font JS -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- Load Header and Footer -->
+	<script>
+		$(function() {
+			$("#header").load("/header");
+			$("#contactus").load("/contact_us");
+			$("#footer").load("/footer");
+		});
+	</script>
+	<script type="text/javascript">
+	  $('#gform').on('submit', function(e) {
+	  $('#gform *').fadeOut(2000);
+	  $('#gform').prepend('Your submission has been processed...');
+	  });
+	</script>
+	<!-- Loading JS -->
+	<script src="/js/loading.js"></script>
 </html>

@@ -244,6 +244,9 @@
 			setStatus("Status : Connected To Database");
 
 			// Get Output Result From Node
+			socket.emit('getAllMessages', {});
+
+			// Get Output Result From Node
 			socket.on('output', function(data) {
 				if (data.length) {
 					var container = $(".chat-messages");

@@ -1,120 +1,6 @@
-@font-face {
-    font-family: 'National-Regular';
-    src: url("https://www.usc.edu/assets/fonts/NationalWeb-Regular.eot");
-    src: local(":)"), url("/NationalWeb-Regular_woff") format("woff"), url("/NationalWeb-Regular_ttf") format("truetype"), url("https://www.usc.edu/assets/fonts/NationalWeb-Regular.svg") format("svg");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'National-Bold';
-    src: url("https://www.usc.edu/assets/fonts/NationalWeb-Bold.eot");
-    src: local(":)"), url("/NationalWeb-Bold_woff") format("woff"), url("/NationalWeb-Bold_ttf") format("truetype"), url("https://www.usc.edu/assets/fonts/NationalWeb-Bold.svg") format("svg");
-    font-weight: 800;
-    font-style: normal;
-}
-
-body {
-    font-family: "National-Regular" !important;
-}
-
-header {
-    padding: 1em;
-    font-family: "National-Bold" !important;
-    text-align: center;
-}
-
-.title {
-    font-size: 1.5em;
-    padding-left: 0.5em;
-    margin: 0;
-}
-
-.title-red {
-    color: #990000;
-}
-
-.title-gold {
-    color: #FFCC00;
-}
-
-#logo_usc {
-    width: 12em;
-}
-
-#sc-logo{
-    width: 10em;
-}
-
-@media (min-width: 768px) {
-
-    header {
-        padding: 1.5em;
-    }
-
-    #logo_usc {
-        width: 17em;
-    }
-
-    .title {
-        font-size: 1.9em;
-        padding-left: 2em;
-        margin: 0;
-    }
-}
-
-#sc-logo{
-    width: 8% !important;
-    height: 8%;
-    margin-left: -10%;
-}
-
-#menu {
-    color: #FFFFFF;
-}
-
-#mainNav {
-    background-color: #990000;
-}
-
-#mainNav .navbar-nav {
-    margin-left: -0.8em;
-}
-
-#mainNav .nav-link {
-    color: #FFFFFF;
-    padding-right: 2em;
-}
-
-#mainNav .nav-link:hover {
-    color: #FFCC00;
-}
-
-section {
-    padding-top: 3em;
-    padding-bottom: 3em;
-}
-
-.section-heading {
-    font-size: 2em;
-    font-weight: 900;
-    color: #990000;
-}
-
-.form-item {
-    margin: 1em;
-    margin-left: 20%;
-    padding: 2em;
-    width:60%;
-    background-color: white;
-    border: 1px solid white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 .form_wrapper {
 	background:#fff;
-	width:800px;
+	width:100%;
 	max-width:100%;
 	box-sizing:border-box;
 	padding:15px;
@@ -122,9 +8,7 @@ section {
 	position:relative;
 	z-index:1;
 }
-.form_container {
-	padding:15px;
-}
+
 .form_wrapper .row {
 	margin:10px -15px;
 }
@@ -154,19 +38,16 @@ section {
 textarea{
     height: 8em;
 }
-
 .text-label{
     width: 100%;
     float: left;
 }
-
 .form_wrapper input[type="text"]:focus, .form_wrapper input[type="email"]:focus, .form_wrapper input[type="tel"]:focus, textarea:focus {
 	-webkit-box-shadow:0 0 2px 1px rgba(255, 169, 0, 0.5);
 	-moz-box-shadow:0 0 2px 1px rgba(255, 169, 0, 0.5);
 	box-shadow:0 0 2px 1px rgba(255, 169, 0, 0.5);
 	border:1px solid #FFCC00; 
 }
-
 .form_wrapper input[type="submit"] {
 	background:#990000;
 	height:50px;
@@ -184,79 +65,26 @@ textarea{
 	-ms-transition: all 0.30s ease-in-out;
 	transition: all 0.30s ease-in-out;
 }
-
 .form_wrapper input[type="submit"]:hover, .form_wrapper input[type="submit"]:focus {
 	background:#FFCC00;
 }
-
 @media screen and (max-width: 650px) {
     .form-item {
         width: 100%;
         margin-left: 0;
     }
-
     .form_wrapper .col_half {
-        width:100%;
-    }
-
+        width:100%;}
     .form_wrapper input[type="submit"] {
         width:30%;
         height:40px;
         font-size:0.7em;
         line-height:40px;
     }
-
     .form_wrapper {
 	   padding:0;
     }
-
     .form_container {
 	   padding:0;
     }
-}
-
-footer {
-    color: #FFFFFF;
-    font-family: "National-Regular";
-    background-color: #444444;
-    padding-bottom: 1em;
-}
-
-.footer-upper {
-    background-color: #777777;
-}
-
-.footer-lower {
-    padding-top: 1em;
-    background-color: #444444;
-}
-
-.footer-heading {
-    font-size: 1.5em;
-    font-family: "National-Bold";
-    color: #FFCC00;
-}
-
-.footer-heading-icon {
-    color: #FFCC00;
-}
-
-.footer-content {
-    padding-left: 1em;
-}
-
-.footer-content #read-more {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.footer-content #read-more:hover {
-    color: #FFCC00;
-}
-
-#bookmark {
-    color: #990000;
-    top: -0.75em;
-    position: relative;
-    width: 2em;
 }
