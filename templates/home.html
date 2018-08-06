@@ -1,78 +1,23 @@
 <!DOCTYPE html>
 <html>
 
-	<!-- Head for all TNA web pages -->
 	<head>
-		<title>TNA</title>
+		<title>SCTNA | Home</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
-		<!-- Logo -->
 		<link rel="shortcut icon" type="image/png" href="/img/logo_sctna.png">
-		<!-- CSS -->
+		<!-- Home CSS and Loading CSS -->
+		<link rel="stylesheet" type="text/css" href="/css/loading.css">
 		<link rel="stylesheet" type="text/css" href="/css/home.css">
+		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<!-- Font -->
+		<!-- Font CSS -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	</head>
 
 	<body>
-		<!-- Facebook Event Init -->
-		<div id="fb-root"></div>
-		<script>
-			(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s); js.id = id;
-				js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=145059409462443&autoLogAppEvents=1';
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
 
-		<!-- Header for all TNA web pages-->
-		<header>
-			<div class="container">
-				<div class="title">
-					<img id="sc-logo" src="/img/sc%20logo.png">
-					<label><label class="title-red"><span class="notranslate">T</span></label><span class="notranslate">ROJANS</span></label>
-					<label><label class="title-red"><span class="notranslate">N</span></label><span class="notranslate">EIGHBORHOOD</span></label>
-					<label><label class="title-red"><span class="notranslate">A</span></label><span class="notranslate">SSOCIATION</span></label>
-				</div>
-				<img id="logo_usc" src="/img/logo_usc_full.jpg"/>
-			</div>
-		</header>
-
-		<!-- Navigation Bar for all TNA web pages -->
-		<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-			<div class="container">
-				<button id="menu" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="fa fa-bars"></i> MENU
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link text-center js-scroll-trigger" href="/">HOME</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-center" href="/about_us">ABOUT US</a>
-                        </li>
-						<li class="nav-item">
-							<a class="nav-link text-center" href="/donate">DONATE</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-center" href="/impact_area">IMPACT AREA</a>
-						</li>
-						<!--<li class="nav-item">
-                        <a class="nav-link text-center" href="#">TOWN HALL</a>
-                    </li>-->
-					</ul>
-					<ul class="navbar-nav ml-auto">
-					  <li class="nav-item">
-							<div id="google_translate_element"></div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<div id="header"></div>
 		
 		<!-- Intro -->
 		<section id="intro">
@@ -80,125 +25,84 @@
 				<div class="intro-text">
 					<div class="intro-heading text-uppercase">WELCOME TO OUR TROJAN FAMILY NEIGHBORHOOD</div>
 					<div class="intro-mission">The Trojans Neighborhood Association brings together students and the community living within the USC DPS zone in order to fight the “wicked problems” our neighborhood faces.</div>
-					<a class="btn btn-warning btn-xl text-uppercase js-scroll-trigger" href="#resource" id="learn_more">Learn More</a>
+					<a class="btn btn-warning btn-xl text-uppercase js-scroll-trigger" href="#concepts" id="learn_more">Learn More</a>
 				</div>
 			</div>
 		</section>
-		<!-- <br> -->    
-        <section id="concepts">
-			<div class="row">
-				<div id="whatwedo">
-					<div class="section-heading" style="text-align: center;">WHAT WE DO</div>
-				    <div class="row" style="margin-top:3em;">
-                        <div class="wwd-column" style="padding-top:1em;">
-                           <img class="wwd-img" src="/img/warning.png" alt="warning" >
-                           <div class="wwd-content" style="font-size:1.1rem;">Bring awareness to the issues plaguing our community</div>
-                        </div>
-                        <div class="wwd-column" style="padding-top:1em;">
-                            <img class="wwd-img" src="/img/megaphone.png" alt="megaphone" >
-                           <div class="wwd-content" style="font-size:1.1rem;">Create a space for members of our neighborhood to communicate and voice their concerns</div>
-                        </div>
-                        <div class="wwd-column" style="padding-top:1em;">
-                            <img class="wwd-img"src="/img/idea.png" alt="idea">
-                           <div class="wwd-content" style="font-size:1.1rem;">Actively seek solutions to problems through projects, workshops, and events</div>
-                        </div>
-			      </div>
-				</div>
-				<div id="event">
-                    <div class="section-heading">EVENT</div>
-					<div class="fb-page" data-href="https://www.facebook.com/usctna" data-tabs="timeline" data-height="450" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
-							<blockquote cite="https://www.facebook.com/usctna" class="fb-xfbml-parse-ignore">
-								<a href="https://www.facebook.com/usctna">Trojans Neighborhood Association</a>
-							</blockquote>
-				    </div>
-				</div>                
-            </div>
-		</section>
-        
 
-		<!-- Forms -->
-		<section id="forms">
-            <div id="content-form">
-                <div class="row">
-                    <div class="column">
-                        <div class="round-button">
-                            <div class="round-button-circle">
-                                <a href="/join_us" class="round-button">JOIN OUR MAILING LIST</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="round-button">
-                            <div class="round-button-circle">
-                                <a href="/get_involved" id="get-involved">GET INVOLVED!</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="round-button">
-                            <div class="round-button-circle">
-                                <a href="/get_help" class="round-button">NEED SOME HELP?</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-		</section>
-		
-		<!-- Footer for all TNA web pages -->
-		<footer>
-			<div class="container footer-upper">
-				<img src="/img/bookmark.png" id="bookmark"/>
-				<div class="row">
-					<div class="layout-half layout-half-padding">
-						<div class="footer-heading">
-							<i class="fas fa-caret-right footer-heading-icon"></i>
-							<label class="footer-heading-font">Address</label>
+		<section id="concepts">
+			<div class="container">
+				<div class="section-heading">WHAT WE DO</div>
+				<div class="resources">
+					<div class="row align-items-center resource-item">
+						<div class="wwd-row">
+							<img class="wwd-img" src="/img/warning.png" alt="warning" >
+							<p class="wwd-content">Bring awareness to the issues plaguing our community</p>
 						</div>
-						<div class="footer-content">
-							<p>University of Southern California</p>
-							<p>Office of Campus Activities SKS 410</p>
-							<p>3607 Trousdale Parkway</p>
-							<p>Los Angeles, CA, 90089-3103</p>
-							<p>Email: tna@usc.edu</p>
+						<div class="wwd-row">
+							<img class="wwd-img" src="/img/megaphone.png" alt="megaphone" >
+							<p class="wwd-content">Create a space for members of our neighborhood to communicate and voice their concerns</p>
 						</div>
-					</div>
-					<div class="layout-half layout-half-padding">
-						<div class="footer-heading">
-							<i class="fas fa-caret-right footer-heading-icon"></i>
-							<label class="footer-heading-font">Follow us</label>
-						</div>
-						<div class="footer-content">
-							<div>
-								<i class="fas fa-angle-right" style="color: whilte;"></i>
-								<i class="fab fa-facebook-square"></i> <a href="https://www.facebook.com/usctna/" style="color: white">facebook</a>
-							</div>
-							<div>
-								<i class="fas fa-angle-right"></i>
-								<i class="fab fa-instagram"></i> instagram                                
-							</div>
-							<div>
-								<i class="fas fa-angle-right"></i>
-								<i class="fas fa-envelope-square"></i> <a href="mailto:tna@usc.edu" style="color: white">email</a>
-							</div>
+						<div class="wwd-row">
+							<img class="wwd-img" src="/img/idea.png" alt="idea" >
+							<p class="wwd-content">Actively seek solutions to problems through projects, workshops, and events</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="footer-lower">
-				<p class="text-center">Designed & Developed by SCTNA Web Development Team</p>
+		</section>
+
+		<section id="events">
+			<div class="container">
+				<div class="section-heading">Events</div>
+				<div class="resources">
+					<div class="row align-items-center resource-item">
+						<div class="fb-page" data-href="https://www.facebook.com/usctna" data-tabs="timeline" data-height="450" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
+								<blockquote cite="https://www.facebook.com/usctna" class="fb-xfbml-parse-ignore">
+									<a href="https://www.facebook.com/usctna">Trojans Neighborhood Association</a>
+								</blockquote>
+						</div>    
+					</div>
+				</div>
 			</div>
-		</footer>
+		</section>
+  
+		<div id="contactus"></div>
+		<div id="footer"></div>
 
-		<!-- JavaScript for all TNA web pages -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		<script src="js/smoothscroll.js"></script>
+	</body>
 
-		<!-- JS -->
+	<!-- jQuery JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<!-- Font JS -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- Load Header and Footer, Load Contact Us Form -->
+	<script>
+		$(function() {
+			$("#header").load("/header");
+			$("#contactus").load("/contact_us");
+			$("#footer").load("/footer");
+		});
+	</script>
+	<!-- Init Facebook Event -->
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=145059409462443&autoLogAppEvents=1';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<!-- Loading JS -->
+	<script src="js/smoothscroll.js"></script>
+	<script src="/js/loading.js"></script>
+
+<!--    Translation JS
 		<script type="text/javascript">
 			function googleTranslateElementInit() {
 				new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
@@ -263,7 +167,8 @@
 					});
 				});
 			});
-		</script>
-
-	</body>
+		</script> -->
+	
 </html>
+
+

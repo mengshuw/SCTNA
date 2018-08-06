@@ -40,6 +40,14 @@ app.get('/about_us', function(req, res) {
 	res.sendFile(path.join('/home/ubuntu/sctna/templates/aboutus.html'));
 });
 
+app.get('/header', function(req, res) {
+	res.sendFile(path.join('/home/ubuntu/sctna/templates/header.html'));
+});
+
+app.get('/footer', function(req, res) {
+	res.sendFile(path.join('/home/ubuntu/sctna/templates/footer.html'));
+});
+
 app.get('/impact_area', function(req, res) {
 	res.sendFile(path.join('/home/ubuntu/sctna/templates/impactarea.html'));
 });
@@ -50,6 +58,10 @@ app.get('/impact_area_manage', function(req, res) {
 
 app.get('/live_chat', function(req, res) {
 	res.sendFile(path.join('/home/ubuntu/sctna/templates/live_chat.html'));
+});
+
+app.get('/contact_us', function(req, res) {
+	res.sendFile(path.join('/home/ubuntu/sctna/templates/contactus.html'));
 });
 
 app.get('/join_us', function(req, res) {

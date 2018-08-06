@@ -24,12 +24,23 @@ mongoose.connect("mongodb://localhost:27017/" + database, function(err, db) {
 		}
 
 		// Emit all messages
-		Message.find().limit(100).sort({'_id' : 1}).exec(function(err, messages) {
-			if (err) {
-				throw err;
-			}
-			socket.emit('output', messages);
-		})
+		// Message.find().limit(100).sort({'_id' : 1}).exec(function(err, messages) {
+		// 	if (err) {
+		// 		throw err;
+		// 	}
+		// 	socket.emit('output', messages);
+		// })
+
+		socket.on('getAllMessages', function(data) {
+			Message.find().limit(100).sort({'_id' : 1}).exec(function(err, messages) {
+				if (err) {
+					throw err;
+				}
+				socket.emit('output', messages);
+			})
+		});
+
+
 
 		// Wait for input
 		socket.on('input', function(data) {
